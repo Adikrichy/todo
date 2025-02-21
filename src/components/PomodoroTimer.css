@@ -1,0 +1,85 @@
+/* Pomodoro Timer Styles */
+.pomodoro-container {
+    background: linear-gradient(135deg, #e0f7fa, #e0ffe6);
+    position: relative;
+    transform: translateY(-2rem);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 2rem !important;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Добавляем плавный переход */
+}
+
+.pomodoro-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+ 
+
+.pomodoro-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff; /* Яркий акцентный цвет */
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.pomodoro-time {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.pomodoro-controls button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.pomodoro-controls button:hover {
+    transform: scale(1.1);
+}
+
+.pomodoro-controls button:active {
+    transform: scale(1.05);
+}
+
+.pomodoro-controls .start-btn {
+    background: linear-gradient(135deg, #4caf50, #66bb6a); /* Зеленый для начала */
+}
+
+.pomodoro-controls .pause-btn {
+    background: linear-gradient(135deg, #ffa726, #ff9800); /* Оранжевый для паузы */
+}
+
+.pomodoro-controls .reset-btn {
+    background: linear-gradient(135deg, #f44336, #e57373); /* Красный для сброса */
+}
+
+/* Анимация для плавного появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
